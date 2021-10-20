@@ -71,11 +71,33 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+let promptUser = () => {
+    return inquirer.prompt(questions);
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// Function for writing README file:
+const writeToFile = util.promisify(fs.writeFile);
+
+// Function to initialize the program:
+let init = async () => {
+    console.log("Welcome to the README.md generator. Answer the following questions to generate a README file for your project. If there are any questions you can't answer, leave them blank. Once completed, you will generate a README.md file.");
+    try {
+        // Obtain user inputs
+        const answers = await promptUser();
+        console.log(answers);
+
+        // Write user answers to readme
+        const readme = generateMarkdown(answers);
+
+        // Save readme to file
+        await writeToFile("README_TEST.md", readme);
+
+        // Success message
+        console.log("You've successfully generated README_TEST.md");
+    } catch (err) {
+        console.log(err);
+    }
+}
 
 // Function call to initialize app
 init();
