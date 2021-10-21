@@ -8,6 +8,9 @@
 * Tested the application in gitbash numerous times
 * Once working properly, recorded a demonstration video
 
+## Link to walkthrough video
+https://watch.screencastify.com/v/MNwYcTcUoXqcT4HlciSy
+
 ## Screenshot of command line:
 ![readme-gen1](https://user-images.githubusercontent.com/88293666/138367368-12da4b8f-eded-4b73-8a4b-5bc0b9957e11.JPG)
 ![readme-gen2](https://user-images.githubusercontent.com/88293666/138367373-ec8bc965-995c-4ccd-bc95-cee7590f1e1f.JPG)
